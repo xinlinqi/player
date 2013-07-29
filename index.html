@@ -1,90 +1,84 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<link type="image/x-icon" rel="shortcut icon" href="images/play.ico">
-	<title>一个简单的音乐播放器</title>
-	<link rel="stylesheet" href="css/index.css" />
-</head>
-<body>
-	<!-- 播放器 -->
-	<div id="player" class="player">
-		<div class="cover">
-			<img id="coverImage" src="images/c1.jpg" width="380px"/>
-		</div>
-		<div class="control clearfix">
-
-			<!-- 播放按钮 -->
-			<div id="playControl" class="play-con">
-				<span id="playBtn" class="b d"></span>
-				<span id="pauseBtn" class="z vs clearfix">
-					<i class="l fl"></i><i class="l fr"></i>
-				</span>
-			</div>
-
-			<!-- 进度条 -->
-			<div class="play-pro">
-				<span id="songProgressBar" class="p b"></span>
-				<span id="songProgressLoad" class="p l"></span>
-				<span id="songProgressCurrent" class="p w"></span>
-				<span id="songProgressHideBar" class="p h"></span>
-			</div>
-
-			<!-- 音量控制 -->
-			<div class="play-vol">
-				<img id="volumeBtn" class="b" src="images/vol.png" width="18px" height="18px"/>
-				<span id="volumePanel" class="p">
-					<span id="volumeProgressBar" class="c">
-						<span class="g">
-							<i id="volumeProgressCurrent" class="w"></i>
-						</span>
-						<span id="volumeCurrentBtn" class="d"></span>
+<html>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<!-- 播放器 -->
+		<div id="player" class="player">
+			<div class="cover"> 
+				<img src="http://ww2.sinaimg.cn/large/5a7a189bgw1e66aijpncrj20ak07p0t9.jpg" width="380px" class="">
+				<!-- 播放按钮 -->
+				<div class="play-btn">
+					<span id="playBtn" class="play-b bs">
+						<i class="play-i bs"> </i>
 					</span>
-				</span>
+					<span id="pauseBtn" class="pause-b" style="display: none;">
+						<i class="pause-l bs"> </i>
+						<i class="pause-l bs"> </i>
+					</span>
+				</div>
+				
 			</div>
-
-		</div>
-
-		<!-- 歌词&播放列表 -->
-		<div class="box">
+			<div class="control clearfix">
+				
+				<!-- 音量控制 -->
+				<div class="play-vol">
+					<img id="volumeBtn" class="control_btn" src="images/vol.png" width="18px" height="18px"/>
+					<span id="volumePanel" class="vol-p">
+						<span id="volumeProgressBar" class="vol-c">
+							<span class="vol-g">
+								<i id="volumeProgressCurrent" class="vol-w"></i>
+							</span>
+							<span id="volumeCurrentBtn" class="vol-d"></span>
+						</span>
+					</span>
+				</div>
+				
+				
+				<!-- 进度条 -->
+				<div class="play-pro">
+					<span id="songProgressBar" class="pro-b"></span>
+					<span id="songProgressCurrent" class="pro-w"></span>
+					<span id="songProgressHideBar" class="pro-h"></span>
+				</div>
+	
+				<!-- 播放列表 -->
+				<div class="play-list">
+					<span id="list_btn" class="list-btn">
+						<span class="list-l"></span>
+						<span class="list-l"></span>
+						<span class="list-l"></span>
+					</span>
+				</div>			
+	
+			</div>
+	
 			<!-- 歌词 -->
-			<div id="lrcPanel" class="lrc">
-				<div id="title" class="title">正在加载</div>
+			<div class="lrc" id="song_lrc">
+				<div class="title"><span id="song_ti">无名曲</span> - <span id="song_ar">无名</span></div>
 				<div class="wrap">
 					<div class="content" id="lrc">
 						<img src="images/loading.gif" width="16px" height="11px"/>
 					</div>
 				</div>
 			</div>
-
-			<!-- 播放列表 -->
-			<div id="playList" class="play-list vs"></div>
-
-			<!-- 显示播放列表按钮 -->
-			<div id="playListBtn" class="play-list-btn">
-				<span></span>
-				<span></span>
-				<span></span>
+			
+			<!-- 歌曲列表 -->
+			<div id="play_list" class="list_panel" style="display: none;">
+				<div class="title">播放列表</div>
+				<ul>
+				</ul>
 			</div>
 		</div>
-
-	</div>
-
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
-	<script type="text/javascript">
-		//播放列表
-		var playlist = [
-			{"songName": "公路之歌", "singerName": "痛苦的信仰", "mp3": "http://xiaoqian.b0.upaiyun.com/s1.mp3", "lrc": "s1.lrc", "coverImage": "images/c1.jpg"},
-			{"songName": "再见杰克", "singerName": "痛苦的信仰", "mp3": "http://xiaoqian.b0.upaiyun.com/s2.mp3", "lrc": "s2.lrc", "coverImage": "images/c2.jpg"},
-			{"songName": "夜空中最亮的星", "singerName": "逃跑计划", "mp3": "http://xiaoqian.b0.upaiyun.com/s3.mp3", "lrc": "s3.lrc", "coverImage": "images/c3.jpg"},
-			{"songName": "Bling Bling Bling", "singerName": "后海大鲨鱼", "mp3": "http://xiaoqian.b0.upaiyun.com/s4.mp3", "lrc": "s4.lrc", "coverImage": "images/c4.jpg"},
-			{"songName": "南方", "singerName": "达达乐队", "mp3": "http://xiaoqian.b0.upaiyun.com/s5.mp3", "lrc": "s5.lrc", "coverImage": "images/c5.jpg"},
-			{"songName": "丢", "singerName": "布衣乐队", "mp3": "http://xiaoqian.b0.upaiyun.com/s6.mp3", "lrc": "s6.lrc", "coverImage": "images/c6.jpg"},
-			{"songName": "每条伤心的大街", "singerName": "飘乐队", "mp3": "http://xiaoqian.b0.upaiyun.com/s7.mp3", "lrc": "s7.lrc", "coverImage": "images/c7.jpg"},
-			{"songName": "再次来临", "singerName": "谢天笑", "mp3": "http://xiaoqian.b0.upaiyun.com/s8.mp3", "lrc": "s8.lrc", "coverImage": "images/c8.jpg"}
-		]
-	</script>
-	<script type="text/javascript" src="js/index.min.js"></script>
-</body>
+		<script type="text/plain" id="song_item">
+			<li>
+				<a class="song_item" href="javascript:void(0);" id="item-{sid}" index="{index}">{title}</a>
+			</li>
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+		<!-- <script type="text/javascript" src="js/music.min.js"></script> -->
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
 </html>

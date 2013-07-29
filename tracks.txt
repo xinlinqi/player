@@ -1,0 +1,36 @@
+{
+	"songs": [
+		{
+			"title": "否定先生",
+			"artist": "邵夷贝 ",
+			"album": "灰色人种",
+			"mp3": "http://xinlinqi.oss.aliyuncs.com/%E5%90%A6%E5%AE%9A%E5%85%88%E7%94%9F-%E9%82%B5%E5%B0%8F%E6%AF%9B.mp3",
+			"cover": "http://ww1.sinaimg.cn/large/5a7a189bgw1e6wsrkli7qj20go0b4ta6.jpg"
+		}, {
+			"title": "小宇",
+			"artist": "张震岳",
+			"album": "思念是一种病",
+			"mp3": "http://xinlinqi.oss.aliyuncs.com/Music/%E5%B0%8F%E5%AE%87-%E5%BC%A0%E9%9C%87%E5%B2%B3.mp3",
+			"cover": "http://ww2.sinaimg.cn/large/5a7a189bgw1e66aijpncrj20ak07p0t9.jpg"
+		}, {
+			"title": "关忆北",
+			"artist": "宋东野 ",
+			"album": "摩登天空7 ",
+			"mp3": "http://xinlinqi.oss.aliyuncs.com/%E5%85%B3%E4%BA%BF%E5%8C%97-%E5%AE%8B%E4%B8%9C%E9%87%8E.mp3",
+			"cover": "http://ww2.sinaimg.cn/large/5a7a189bgw1e6xqk0cboyj20go0b4jrs.jpg"
+		}, {
+			"title": "幻听",
+			"artist": "许嵩 ",
+			"album": "网络新神曲 ",
+			"mp3": "http://xinlinqi.oss.aliyuncs.com/%E5%B9%BB%E5%90%AC.mp3",
+			"cover": "http://ww1.sinaimg.cn/large/5a7a189bgw1e6xrd6ak8nj20db0970t9.jpg"
+		}, {
+			"title": "丢",
+			"artist": "布衣乐队 ",
+			"album": "那么久 ",
+			"mp3": "http://xinlinqi.oss.aliyuncs.com/%E4%B8%A2.mp3",
+			"cover": "http://ww4.sinaimg.cn/large/5a7a189bgw1e6xrowb3toj20ak06e0t0.jpg"
+		}
+		
+	]
+}

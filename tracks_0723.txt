@@ -1,0 +1,35 @@
+{
+	"songs": [
+		{
+			"title": "小宇",
+			"artist": "张震岳",
+			"album": "思念是一种病",
+			"mp3": "http://toolsapp.sinaapp.com/dupan.php?shareid=2915820541&uk=1174538555",
+			"cover": "http://ww2.sinaimg.cn/large/5a7a189bgw1e66aijpncrj20ak07p0t9.jpg"
+		}, {
+			"title": "夜曲",
+			"artist": "周杰伦",
+			"album": "十一月的萧邦",
+			"mp3": "http://toolsapp.sinaapp.com/dupan.php?shareid=3930714501&uk=1174538555",
+			"cover": "http://images.enet.com.cn/elady/2005/1027/jay4.jpg"
+		}, {
+			"title": "致青春",
+			"artist": "王菲",
+			"album": "致青春",
+			"mp3": "http://toolsapp.sinaapp.com/dupan.php?shareid=3925359597&uk=1174538555",
+			"cover": "http://image.xinmin.cn/2013/05/15/20130515174659828854.jpg"
+		}, {
+			"title": "否定先生",
+			"artist": "邵夷贝 ",
+			"album": "灰色人种",
+			"mp3": "http://mr4.douban.com/201307231457/ee5532d89881d9aefb8cad97fbe42982/view/musicianmp3/mp3/x12379802.mp3",
+			"cover": "http://img3.douban.com/view/photo/photo/public/p1566465621.jpg"
+		}, {
+			"title": "关忆北",
+			"artist": "宋东野 ",
+			"album": "摩登天空7 ",
+			"mp3": "http://mr3.douban.com/201307231509/ac200636540cfcf16d225b57eaa4ea68/view/musicianmp3/mp3/x13111097.mp3",
+			"cover": "http://img3.douban.com/view/photo/photo/public/p2027698455.jpg"
+		}
+	]
+}
